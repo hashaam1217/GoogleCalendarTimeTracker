@@ -17,12 +17,18 @@ class GCTT(Gtk.Application):
         grid = Gtk.Grid(column_spacing=6, row_spacing=6)
 
         # Create buttons and add them to the grid
-        for row in range(3):
-            for col in range(2):
-                button = Gtk.Button(label=f"Button {row+1}-{col+1}")
-                button.set_hexpand(True)  # Allow horizontal expansion
-                button.set_vexpand(True)  # Allow vertical expansion
-                grid.attach(button, col, row, 1, 1)
+        #for row in range(3):
+        #    for col in range(2):
+        #        button = Gtk.Button(label=f"Button {row+1}-{col+1}")
+        #        button.set_hexpand(True)  # Allow horizontal expansion
+        #        button.set_vexpand(True)  # Allow vertical expansion
+        #        grid.attach(button, col, row, 1, 1)
+
+        # Creating the buttons manually
+        button = Gtk.Button(label=f"Button 1-1")
+        button.set_hexpand(True)  # Allow horizontal expansion
+        button.set_vexpand(True)  # Allow vertical expansion
+        grid.attach(button, 1, 1, 1, 1)
 
         # Set the grid as the child of the window
         window.set_child(grid)
